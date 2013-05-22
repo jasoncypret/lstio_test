@@ -20,9 +20,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
@@ -46,7 +44,6 @@ gem "database_cleaner", ">= 1.0.0.RC1", :group => :test
 gem "email_spec", ">= 1.4.0", :group => :test
 gem "omniauth", ">= 1.1.3"
 gem "omniauth-twitter"
-gem "bcrypt-ruby", :require => "bcrypt"
 gem "cancan", ">= 1.6.9"
 gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.1.0"

@@ -8,18 +8,14 @@ h1 Sign Up
         - for message in @user.errors.full_messages
           li
             = message
-  p
+  .field
     = f.label :email
-    br
     = f.text_field :email
-  p
+  .field
     = f.label :password
-    br
     = f.password_field :password
-  p
+  .field
     = f.label :password_confirmation
-    br
     = f.password_field :password_confirmation
-  
-  p.button
+  .actions
     = f.submit
