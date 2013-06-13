@@ -1,22 +1,26 @@
 source 'https://rubygems.org'
 
-#gem 'rails', '3.2.13'
-gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', '3.2.13'
+#gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'compass-rails'
   gem 'uglifier', '>= 1.0.3'
   # gem 'expressionui'
-  # For local changes
-  gem 'expressionui', :path => '~/Dropbox/projects/expressionUI/github/expressionui/pkg'
+  gem 'expressionui', :path => '~/Dropbox/projects/expressionUI/github/expressionui/'
+end
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "meta_request"
 end
 
 gem 'jquery-rails'
+gem 'knockout-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem "unicorn", ">= 4.3.1"
 gem "pg", ">= 0.15.0"
@@ -33,5 +37,3 @@ gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.1.0"
 gem "quiet_assets", ">= 1.0.2", :group => :development
 gem "figaro", ">= 0.6.3"
-gem "better_errors", ">= 0.7.2", :group => :development
-gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri_19, :rbx]
