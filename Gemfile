@@ -19,6 +19,7 @@ group :development do
   gem "meta_request"
 end
 
+gem 'turbolinks'
 gem 'jquery-rails'
 gem 'knockout-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'

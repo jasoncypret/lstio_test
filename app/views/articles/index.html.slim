@@ -1,5 +1,11 @@
 h1 Items
-
+ul style="list-style: none; padding: 0;"
+  - for item in @items
+    li.group
+      h3.perc75.left
+        = item.item
+      .perc25.right
+        = link_to 'Delete', item, :method => 'delete'
 .form
   = form_for @item do |f|
     - if @item.errors.any?
@@ -13,14 +19,34 @@ h1 Items
       = f.label :item
       = f.text_field :item
     = f.submit :class => "btn accent"
+
+
+  
+
+h1 Lists
+ul style="list-style: none; padding: 0;"
+  - for list in @lists
+    li.group
+      h3.perc75.left
+        = list.name
+      .perc25.right
+        = link_to 'Delete', list, :method => 'delete'
+.form
+  = form_for @list do |f|
+    - if @list.errors.any?
+      .error_messages
+        h2 Form is invalid
+        ul
+          - for message in @list.errors.full_messages
+            li
+              = message
+    .field
+      = f.label :name
+      = f.text_field :name
+    = f.submit :class => "btn accent"
+
+
   
 
 
 
-ul
-  - for item in @items
-    li
-      = item.item
-    li
-      = item.id
-    

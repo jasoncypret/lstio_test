@@ -9,7 +9,8 @@ html
   body class="#{params[:controller]}"
     .container
       - flash.each do |name, msg|
-        = content_tag :div, msg, :id => "flash_#{name}"
+        .notify_container.content_visible
+          = render :partial => "shared/notify", locals: { position: "top", style: "#{name}", message: "#{msg}"}
       = yield
 
   = javascript_include_tag "application"

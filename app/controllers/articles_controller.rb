@@ -2,9 +2,8 @@ class ArticlesController < ApplicationController
   def index
     @item = Item.new
     @items = Item.all
-  end
-  def create
-    Item.create params[:item]
-    redirect_to :back
+    
+    @list = List.new
+    @lists = List.all
   end
 end
