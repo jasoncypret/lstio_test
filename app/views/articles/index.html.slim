@@ -1,0 +1,26 @@
+h1 Items
+
+.form
+  = form_for @item do |f|
+    - if @item.errors.any?
+      .error_messages
+        h2 Form is invalid
+        ul
+          - for message in @item.errors.full_messages
+            li
+              = message
+    .field
+      = f.label :item
+      = f.text_field :item
+    = f.submit :class => "btn accent"
+  
+
+
+
+ul
+  - for item in @items
+    li
+      = item.item
+    li
+      = item.id
+    

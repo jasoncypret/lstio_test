@@ -1,2 +1,15 @@
+$font_stack: lato
+
 @import compass
-@import expressionui.sass
+@import expressionui
+
+.container
+  width: 500px
+  margin: 0 auto
+  +tablet-only
+    width: auto
+    margin: 0 $pad
+  +mobile-only
+    width: auto
+    margin: 0 $pad
+

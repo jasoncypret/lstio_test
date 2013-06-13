@@ -1,8 +1,6 @@
 #= require jquery
 #= require knockout
-#= require expressionui.modal.js
-#= require expressionui.popover.js
-#= require expressionui.notify.js
+#= require expressionui.all.js
 
 
 class ViewModel
